@@ -23,14 +23,14 @@
 } ?></span>
         </div>
         
-        <form action="/" method="POST" class="flex flex-wrap">
+        <form method="POST" class="flex flex-wrap">
             <div class="w-1/3 bg-transparent mx-2 py-2 px-1 my-1"><input type="text" name="email" value="" placeholder="Sisesta E-post"></div>
             <div class="w-1/3 bg-transparent mx-2 py-2 px-1 my-1"><input type="password" name="password" value="" placeholder="Sisesta parool"></div>
             <div class="w-1/4 bg-transparent mx-2 py-2 px-1 my-1 text-right">
-                <button type="submit" name="type" value="add" class="bg-green-light hover:bg-green text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Lisa</button>
+                <button type="submit" formaction="/store" class="bg-green-light hover:bg-green text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Lisa</button>
             </div>
         </form>
-        <div action="/" method="POST" class="flex flex-wrap">
+        <div class="flex flex-wrap">
             <div class="w-1/3 bg-transparent py-2 px-3 my-1 border-b">Email</div>
             <div class="w-1/3 bg-transparent py-2 px-3 my-1 border-b">Parool</div>
             <div class="w-1/4 bg-transparent py-2 px-3 my-1 border-b"></div>
@@ -43,8 +43,8 @@
             </div>
             <div class="w-1/3 bg-transparent mx-2 py-2 px-1 my-1 rounded"><input type="password" name="password" value="<?=$user->password ?>"></div>
             <div class="w-1/4 bg-transparent mx-2 py-2 px-1 my-1 rounded text-right">
-                <button type="submit" name="type" value="edit" class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Muuda</button>
-                <button type="submit" name="type" value="delete" class="bg-red hover:bg-red-light text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Kustuta</button>
+                <button type="submit" formaction="/update" class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Muuda</button>
+                <button type="submit" formaction="/delete" class="bg-red hover:bg-red-light text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Kustuta</button>
             </div>
         </form>
         <?php endforeach ?>
